@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Drinq",
+    "version": "1.0.0",
+    "description": "Rough day at work? Sudden urge to socialize in a crowded, dimly lit location? Enjoy sticky tables? Find a happy hour near you!",
+    "permissions": [
+        "geolocation",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_popup": "index.html",
+        "default_title": "Drinq Up!"
+    },
+    "icons": {
+        "16": "images/icon_ext.png",
+        "48": "images/icon_ext.png"
+    }
+}
