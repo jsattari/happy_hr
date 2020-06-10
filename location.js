@@ -1,23 +1,16 @@
-var addy = document.getElementById("location");
+// var button = document.getElementById("location-button");
+// var x = document.getElementById("drop_loc");
 
-var options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
-  
-  function success(pos) {
-    var crd = pos.coords;
-  
-    console.log('Your current position is:');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
-    addy.innerHTML = "Location: " + crd.latitude + "," + crd.longitude;
+$('#location-button').click(function(){
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position){
+        console.log(position);
+        $.get("http://open.mapquestapi.com/geocoding/v1/reverse?key=QjBE85QzuwMz0zbwcxl609zYM3BM3VA5&location="+ position.coords.latitude + "," + position.coords.longitude +"&includeRoadMetadata=true&includeNearestIntersection=true", function(data) {
+          console.log(data);
+        })
+        var img = new Image();
+        img.src = "http://open.mapquestapi.com/geocoding/v1/reverse?key=QjBE85QzuwMz0zbwcxl609zYM3BM3VA5&location=" + position.coords.latitude + "," + position.coords.longitude + "&includeRoadMetadata=true&includeNearestIntersection=true&thumbMaps=true";
+        $('#drop_loc').html(img);
+      });
   }
-  
-  function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
-  
-  navigator.geolocation.getCurrentPosition(success, error, options);
+});

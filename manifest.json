@@ -14,5 +14,6 @@
     "icons": {
         "16": "images/icon_ext.png",
         "48": "images/icon_ext.png"
-    }
+    },
+    "content_security_policy": "default-src 'self'; script-src 'self' https://api.mqcdn.com; object-src 'self'; connect-src 'self;"
 }
