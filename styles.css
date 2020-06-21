@@ -1,6 +1,6 @@
 body {
-    height: 600px;
-    width: 800px;
+    height: 400px;
+    width: 600px;
 }
 
 #logo {
@@ -17,7 +17,7 @@ body {
     border: 1px coral;
 }
 
-#drop_loc {
+#map {
     width: 95%;
     margin: auto;
     padding: 0 5% 0;
