@@ -15,5 +15,5 @@
         "16": "images/icon_ext.png",
         "48": "images/icon_ext.png"
     },
-    "content_security_policy": "default-src 'self'; script-src 'self' 'unsafe-eval'; object-src 'self'; connect-src http://open.mapquestapi.com; style-src-elem 'self'; font-src 'self'; img-src 'self';"
+    "content_security_policy": "default-src 'self'; script-src 'self' 'unsafe-eval'; object-src 'self'; connect-src http://open.mapquestapi.com http://www.mapquestapi.com; style-src-elem 'self'; font-src 'self'; img-src 'self';"
 }

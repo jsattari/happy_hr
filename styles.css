@@ -1,6 +1,8 @@
 body {
     height: 400px;
     width: 600px;
+    background-color: lavender;
+    display: table;
 }
 
 #logo {
@@ -13,7 +15,7 @@ body {
 #location {
     width: 95%;
     margin: auto;
-    padding: 0% 45% 0%;
+    padding: 0% 0% 0%;
     border: 1px coral;
 }
 
